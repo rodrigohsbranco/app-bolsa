@@ -1,0 +1,123 @@
+.materia-interna{
+        width: var(--largura-interna);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+        align-content: center;
+        gap: 20px;
+}
+
+.materia-interna h1{
+    leading-trim: both;
+    color: var(--cor-verde-escuro);
+    text-edge: cap;
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 3.5rem */
+}
+
+.materia-interna h2{
+    leading-trim: both;
+    text-edge: cap;
+    color: var(--cor-cinza);
+    font-family: Roboto;
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 2.1rem */
+    padding-bottom: 30px;
+}
+
+.autor-materia {
+    color: var(--cor-verde-escuro);
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 1.125rem;
+    line-height: 100%;
+}
+
+.autor-materia span{
+    display: block;
+    padding-top: 5px;
+    font-weight: 400;
+    font-size: 80%;
+}
+
+.autor-materia b{
+    font-weight: 700;
+}
+
+.share-icons{
+    width: auto;
+    display: flex;
+    gap: 10px;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.share-icons img{
+    width: 100%;
+    height: auto;
+}
+
+hr.divisoria-preta {
+    display: block;
+    width: 100%;
+    border: 1px solid black;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.conteudo-materia{
+    width: 70%;
+    float: left;
+    position: relative;
+}
+
+.conteudo-materia img{
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+
+}
+
+.conteudo-materia p{
+    color: #000;
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 1.4rem */
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.conteudo-materia h2{
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.mais-lidas{
+    align-self: top;
+    align-self: flex-start;
+}
+
+.cinza-medio .mercado-home{
+    margin-top: 0px;
+}
+
+@media (max-width:1365px){
+    .conteudo-materia{
+        width: 100%;
+    }
+
+    .blog-home .mais-lidas {
+        width: 100%;
+    }
+}
