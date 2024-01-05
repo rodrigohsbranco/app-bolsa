@@ -100,12 +100,6 @@ body h2 {
   padding: 5rem 0;
 }
 
-/* RRRRRRRRRRRRRRRRRRRR */
-.ativos-container-flex{
-  padding-bottom: 0;
-}
-/* RRRRRRRRRRRRRRRRRRRR */
-
 /************* MENU PRINCIPAL ***********/
 
 .menu-principal {
@@ -362,12 +356,12 @@ body h2 {
   margin-bottom: 4rem;
 }
 
-.topo-secao-ativos {
+/* .topo-secao-ativos {
   width: 100%;
   display: flex;
   gap: 20px;
   align-items: flex-end;
-}
+} */
 
 hr {
   border: 1px solid var(--cor-primaria);
@@ -469,8 +463,8 @@ hr {
   gap: 20px;
 }
 
-/* RRRRRRRRRRRRRRR */
-.ativos-home {
+.section-home,
+.estrategias-home {
   width: var(--largura-interna);
   display: flex;
   flex-direction: row;
@@ -480,7 +474,6 @@ hr {
   align-content: stretch;
   gap: 20px;
 }
-/* RRRRRRRRRRRRRRR */
 
 .blog-externo {
   width: 75%;
@@ -701,13 +694,11 @@ hr {
   gap: 20px;
 }
 
-/* RRRRRRRRRRRRRR */
 .todas-opcoes {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
 }
-/* RRRRRRRRRRRRRRR */
 
 .acoes {
   display: flex;
@@ -814,24 +805,11 @@ hr {
   width: 25%;
 }
 
-/***************** TODOS OS ATIVOS *****************/
-
-/* .ativos-home {
-    width: var(--largura-interna);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
-    align-content: stretch;
-    gap: 20px;
-} */
-
-.ativos-select {
+/* .ativos-select {
   border-color: var(--cor-cinza-borda);
   border-radius: 5px;
   padding: 10px;
-}
+} */
 
 /******* FOOTER *******/
 

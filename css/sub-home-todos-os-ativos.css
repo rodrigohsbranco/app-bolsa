@@ -1,0 +1,16 @@
+.ativos-container-flex {
+  padding-bottom: 0;
+}
+
+.topo-secao-ativos {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.ativos-select {
+  border-color: var(--cor-cinza-borda);
+  border-radius: 5px;
+  padding: 10px;
+}

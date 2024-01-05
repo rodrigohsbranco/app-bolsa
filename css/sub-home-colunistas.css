@@ -57,6 +57,19 @@ ul.paginacao li a:hover:not(.active) {
   margin: 0 0 3rem 0;
 }
 
+.blog-padrao.cem-porcento {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.blog-externo.cem-porcento {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
 @media (max-width: 767px) {
   .nossos-colunistas {
     display: block;
@@ -84,9 +97,16 @@ ul.paginacao li a:hover:not(.active) {
   .colunistas-container-flex {
     padding-bottom: 0 !important;
   }
+
+  .blog-externo.cem-porcento {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 767px) and (max-width: 1024px) {
+  .blog-externo.cem-porcento {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 400px) {

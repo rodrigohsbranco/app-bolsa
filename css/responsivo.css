@@ -16,11 +16,9 @@
         padding: 3rem 0;
     }
 
-    /* RRRRRRRRRRRRRRRRRRRR */
     .ativos-container-flex {
         padding-bottom: 0;
     }
-    /* RRRRRRRRRRRRRRRRRRRR */
 
     .destaque-principal{
         padding: 1.5em 1.5em 2em 1.5em;
@@ -64,13 +62,11 @@
         margin-bottom: 1rem;
     }
 
-    /* RRRRRRRRRRRRRRR */
     .mercado-home,
-    .ativos-home {
+    .section-home {
         flex-direction: column;
         flex-wrap: wrap;
     }
-    /* RRRRRRRRRRRRRRR */
 
     .blog-externo {
         width: 100%;
@@ -160,15 +156,13 @@
         flex-wrap: nowrap;
     }
 
-    /* RRRRRRRRR */
-    .ativos {
+    .ativos, .topo-estrategias {
         flex-direction: column;
         align-items: stretch;
     }
-    .ativos hr {
+    .ativos hr, .topo-estrategias hr {
         width: 100%;
     }
-    /* RRRRRRRRRRRRRRRRRRRR */
 
     #ultimo-video {
         width: 100%;
