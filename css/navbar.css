@@ -146,14 +146,16 @@
   height: 100%;
   background-color: var(--cor-branca);
   color: #000000;
-  padding: 5rem 0;
+  padding: 5rem 0 0 0;
   box-sizing: border-box;
   display: none;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .tabPanel .tab-section {
-  width: var(--largura-interna);
+  display: flex;
+  flex-direction: column;
+  margin: 0 21rem 0 18rem;
 }
 
 .acao-data-atualizacao {
@@ -170,7 +172,116 @@
   margin: 4rem 0;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+.imagem-info {
+  padding-bottom: 0.625rem;
+}
+
+.section-interna-acao {
+  margin-bottom: 4rem;
+}
+
+.sobre-acao {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 20px;
+  margin-bottom: 2rem;
+}
+
+.info-acao {
+  font-size: 1.375rem;
+  font-weight: 700;
+}
+
+.link-site-acao {
+  color: var(--cor-primaria);
+  font-size: 1.375rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.section-ultimas-noticias {
+  background-color: var(--cor-branca-op);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  padding: 6rem 21rem 6rem 18rem;
+  gap: 20px;
+}
+
+.nome-portal-externo {
+  color: var(--cor-cinza);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.ultimas-noticias {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 20px;
+}
+
+.ultimas-noticias .infos-blog {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dfe4e2;
+  text-decoration: none;
+}
+.ultimas-noticias .titulo-padrao-materia {
+  color: var(--cor-verde-escuro);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.section-interna-outras-acoes {
+  margin-bottom: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.topo-secao-outras-acoes {
+  width: 70%;
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  margin: 4rem 0;
+}
+
+.secao-outras-acoes {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 20px;
+}
+
+.opcoes-select {
+  border-color: var(--cor-cinza-borda);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* TAB OPÇÕES */
+.tab-opcoes {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) and (max-width: 1366px) {
+  .tabPanel .tab-section {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0rem 0 5rem;
+    width: 90%;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+
+  .section-ultimas-noticias {
+    padding: 5rem;
+  }
 }
 
 @media (max-width: 767px) {

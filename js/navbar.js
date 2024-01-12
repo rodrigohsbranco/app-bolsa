@@ -11,5 +11,6 @@ function showPanel(panelIndex) {
         node.style.display = "none";
     });
     tabPanels[panelIndex].style.display = "flex";
+    tabPanels[panelIndex].style.flexDirection = 'column';
 }
 showPanel(0);
