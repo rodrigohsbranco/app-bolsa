@@ -1,0 +1,193 @@
+.navbar-visao-geral {
+  width: 100%;
+  padding: 3rem;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-image: url(../imgs/plataforma-petroleo-img.webp);
+  background-position: center;
+  background-size: cover;
+}
+
+.navbar-acao-visao-geral {
+  width: var(--largura-interna);
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-acao,
+.navbar-acao-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navbar-visao-geral-texto {
+  color: var(--cor-cinza);
+  font-weight: 700;
+  line-height: 1.375rem;
+}
+
+.navbar-acao-texto {
+  color: var(--cor-verde-escuro);
+  font-family: "Borna";
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 3.5rem;
+}
+
+.navbar-nome-acao {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-acao-descricao {
+  color: var(--cor-verde-escuro);
+  font-weight: 500;
+  padding-left: 0.75rem;
+}
+
+.navbar-acao-valor {
+  display: flex;
+  justify-content: right;
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+}
+
+.acao-valor-e-percentual {
+  margin-right: 1.125rem;
+}
+
+.acao-moeda {
+  font-weight: 700;
+  color: var(--cor-verde-escuro);
+}
+
+.acao-valor {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--cor-verde-escuro);
+}
+
+.acao-percentual {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--cor-primaria);
+}
+
+.navbar-acao-variacoes {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar-acao-variacao {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1.125rem;
+}
+
+.variacao-valor {
+  color: var(--cor-verde-escuro);
+  font-weight: 700;
+  line-height: 1.125rem;
+}
+
+.variacao-periodo {
+  color: var(--cor-cinza);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+/* NAVBAR */
+.tabContainer {
+  width: 100%;
+  /* height: 350px; */
+}
+
+.tabContainer .buttonContainer {
+  background-color: var(--cor-branca-op);
+  display: flex;
+  justify-content: center;
+  height: 61px;
+  padding: 0 8rem;
+}
+
+.tabContainer .buttonContainer button {
+  color: var(--cor-verde-escuro);
+  width: 10%;
+  height: 100%;
+  font-family: "Roboto";
+  font-weight: 700;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.625rem;
+  background-color: var(--cor-branca-op);
+}
+
+.tabContainer .buttonContainer button:hover {
+  background-color: var(--cor-branca);
+}
+
+.tabContainer .buttonContainer .botao-texto-acao {
+  color: var(--cor-cinza);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  font-family: "Roboto";
+  padding-right: 0.625rem;
+}
+
+.tabContainer .tabPanel {
+  height: 100%;
+  background-color: var(--cor-branca);
+  color: #000000;
+  padding: 5rem 0;
+  box-sizing: border-box;
+  display: none;
+  justify-content: center;
+}
+
+.tabPanel .tab-section {
+  width: var(--largura-interna);
+}
+
+.acao-data-atualizacao {
+  color: var(--cor-cinza);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.topo-secao-graficos {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  margin: 4rem 0;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media (max-width: 767px) {
+  .navbar-acao-visao-geral {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-acao-info {
+    margin-top: 3rem;
+  }
+
+  .navbar-acao-valor {
+    display: flex;
+    justify-content: start;
+  }
+}
+
+@media (max-width: 500px) {
+}

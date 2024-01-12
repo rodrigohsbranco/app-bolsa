@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Opções Pro</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/todos-colunistas.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+  <link rel="stylesheet" href="css/reset.css">
+</head>
+
+<body>
+  <header class="menu-principal">
+    <menu class="container-menu-principal">
+      <img class="logo" src="imgs/logo-opcoes-main.svg">
+      <ul id="menu">
+        <li><a href="#">Ativos</a></li>
+        <li><a href="#">Notícias</a></li>
+        <li><a href="#">Estratégias</a></li>
+        <li><a href="#">Ferramentas</a></li>
+        <li><a href="#">Cursos</a></li>
+        <a href=""><img style="width:21px;" src="imgs/pesquisa.svg" /></a>
+        <a href=""><img style="width:21px;" src="imgs/ic-membro.svg" /></a>
+      </ul>
+    </menu>
+
+    <iframe width="100%" style="background-color:#000" height="30px"
+      src="https://carousel-widget.nelogica.com.br/#/?config=%5B%7B%22list%22%3A%5B%7B%22exchange%22%3A%22BMFDeferred%22,%22symbols%22%3A%5B%22WINFUT%22,%22WDOFUT%22,%22CIELOFUT%22,%22DI1FUT%22,%22DOLFUT%22,%22FRP0%22,%22INDFUT%22%5D%7D,%7B%22exchange%22%3A%22BovespaDeferred%22,%22symbols%22%3A%5B%22ABEV3%22,%22BBAS3%22,%22BBDC4%22,%22BRAP4%22,%22BRFS3%22,%22CEAB3%22,%22AURE3%22,%22CIEL3%22,%22CMIG4%22,%22CSNA3%22,%22CYRE3%22,%22DASA3%22,%22EMBR3%22,%22GFSA3%22,%22GGBR4%22,%22GOAU4%22,%22IBOV%22,%22ITSA4%22,%22ITUB4%22,%22LREN3%22,%22MRVE3%22,%22OIBR4%22,%22PETR3%22,%22PETR4%22,%22SLED4%22,%22TAEE3%22,%22USIM5%22,%22VALE3%22%5D%7D%5D,%22duration%22%3A400,%22production%22%3Atrue,%22design%22%3A%22compact%22,%22theme%22%3A%22dark%22,%22product%22%3A%22nelogica%22,%22token%22%3A%22eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJPcmlvbiIsImlhdCI6MTY4ODAxMDYwNCwiZXhwIjoyMDAzNjI5ODA0LCJpc3MiOiJBcG9sbG8iLCJhY3RpdmF0aW9uX2NvZGUiOiIwMDAwMDAwMDAwMDAwMDAwMDI2IiwidG9rZW5fdHlwZSI6ImFjY2VzcyJ9.gmTvdboGgWqLjbKbqpFLufRVVDGO5bD40_pFRijCkLk%22%7D%5D"></iframe>
+  </header>
+
+  <!-- VISÃO GERAL AÇÃO -->
+
+  <section class="container-flex navbar-visao-geral">
+    <div class="navbar-acao-visao-geral">
+      <div class="navbar-acao">
+        <p class="navbar-visao-geral-texto">VISÃO GERAL DE</p>
+        <p class="navbar-acao-texto">PETR4</p>
+        <div class="navbar-nome-acao">
+          <img src="../imgs/logo-petr4.webp" alt="Logo da Petrobrás">
+          <span class="navbar-acao-descricao">Petróleo Brasileiro S.A. - Petrobras</span>
+        </div>
+      </div>
+      <div class="navbar-acao-info">
+        <div class="navbar-acao-valor">
+          <div class="acao-valor-e-percentual">
+            <span class="acao-moeda">R$</span>
+            <span class="acao-valor">29,63</span>
+          </div>
+          <div class="acao-valor-e-percentual">
+            <span class="acao-percentual">0.78%</span>
+            <img src="../imgs/img-seta-cima.webp" alt="Seta para cima">
+          </div>
+        </div>
+        <div class="navbar-acao-variacoes">
+          <div class="navbar-acao-variacao">
+            <span class="variacao-valor">+ 12,84%</span>
+            <span class="variacao-periodo">Var. mês atual</span>
+          </div>
+          <div class="navbar-acao-variacao">
+            <span class="variacao-valor">+ 62,84%</span>
+            <span class="variacao-periodo">Var. 12 meses</span>
+          </div>
+          <div class="navbar-acao-variacao">
+            <span class="variacao-valor">R$ 13,81</span>
+            <span class="variacao-periodo">Min. 12 meses</span>
+          </div>
+          <div class="navbar-acao-variacao">
+            <span class="variacao-valor">R$ 30,44</span>
+            <span class="variacao-periodo">Máx. 12 meses</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- NAVBAR -->
+
+  <div class="tabContainer">
+    <div class="buttonContainer">
+      <div class="botao-texto-acao" disabled>PETR4 - R$ 29,63 + 78%</div>
+      <button onclick="showPanel(0)">Visão Geral</button>
+      <button onclick="showPanel(1)">Opções</button>
+      <button onclick="showPanel(2)">Dividendos</button>
+      <button onclick="showPanel(3)">Aluguéis</button>
+      <button onclick="showPanel(4)">Notícias</button>
+      <button onclick="showPanel(5)">Indicadores</button>
+      <button onclick="showPanel(6)">Sobre</button>
+    </div>
+
+    <!-- ABA VISÃO GERAL -->
+    <div class="tabPanel">
+      <section class="tab-section">
+        <div class="topo-secao">
+          <h2>Cotação</h2>
+          <div class="acao-valor-e-percentual">
+            <span class="acao-percentual">0.78%</span>
+            <img src="../imgs/img-seta-cima.webp" alt="Seta para cima">
+          </div>
+          <hr><span class="acao-data-atualizacao">Atualizado em: 18/04/2023 às 10:32:12</span>
+        </div>
+        <div class="navbar-acao-variacoes">
+          <div class="navbar-acao-variacao">
+            <span class="variacao-valor">R$ 28,94</span>
+            <span class="variacao-periodo">Abertura</span>
+          </div>
+          <div class="navbar-acao-variacao">
+            <span class="variacao-valor">R$ 28,94</span>
+            <span class="variacao-periodo">Mínimo</span>
+          </div>
+          <div class="navbar-acao-variacao">
+            <span class="variacao-valor">R$ 28,94</span>
+            <span class="variacao-periodo">Médio</span>
+          </div>
+          <div class="navbar-acao-variacao">
+            <span class="variacao-valor">R$ 28,94</span>
+            <span class="variacao-periodo">Máximo</span>
+          </div>
+          <div class="navbar-acao-variacao">
+            <span class="variacao-valor">R$ 28,94</span>
+            <span class="variacao-periodo">Fechamento</span>
+          </div>
+          <div class="navbar-acao-variacao">
+            <span class="variacao-valor">R$ 2.9 Bi</span>
+            <span class="variacao-periodo">Volume dia</span>
+          </div>
+          <div class="navbar-acao-variacao">
+            <span class="variacao-valor">R$ 2.9 Bi</span>
+            <span class="variacao-periodo">Volume médio</span>
+          </div>
+          <div class="navbar-acao-variacao">
+            <span class="variacao-valor">R$ 132.232</span>
+            <span class="variacao-periodo">N. Negócios</span>
+          </div>
+          <div class="navbar-acao-variacao">
+            <span class="variacao-valor">R$ 32.232</span>
+            <span class="variacao-periodo">PUT mais negociada</span>
+          </div>
+          <div class="navbar-acao-variacao">
+            <span class="variacao-valor">R$ 12.542</span>
+            <span class="variacao-periodo">CALL mais negociada</span>
+          </div>
+        </div>
+        <div>
+          <!-- AQUI VEM O GRÁFICO -->
+        </div>
+
+        <!-- Indicadores de PETR4 -->
+        <div class="topo-secao-graficos">
+          <h2>Indicadores de PETR4</h2>
+          <hr><a class="link-secao" href="">ver todos os indicadores ></a>
+        </div>
+        <div>
+          <!-- AQUI VEM OS INDICADORES -->
+        </div>
+
+        <!-- Alugueis de ações da PETR4 -->
+        <div class="topo-secao-graficos">
+          <h2>Alugueis de ações da PETR4</h2>
+          <hr><a class="link-secao" href="">histórico de aluguéis ></a>
+        </div>
+        <div class="navbar-acao-variacoes">
+          <div class="navbar-acao-variacao">
+            <span class="variacao-valor">16/06</span>
+            <span class="variacao-periodo">Resumo do dia</span>
+          </div>
+          <div class="navbar-acao-variacao">
+            <span class="variacao-valor">1,49%</span>
+            <span class="variacao-periodo">Tomador (Média)</span>
+          </div>
+          <div class="navbar-acao-variacao">
+            <span class="variacao-valor">2,20%</span>
+            <span class="variacao-periodo">Tomador (Max)</span>
+          </div>
+          <div class="navbar-acao-variacao">
+            <span class="variacao-valor">0,01%</span>
+            <span class="variacao-periodo">Doador (Média)</span>
+          </div>
+          <div class="navbar-acao-variacao">
+            <span class="variacao-valor">2,20%</span>
+            <span class="variacao-periodo">Doador (Min)</span>
+          </div>
+          <div class="navbar-acao-variacao">
+            <span class="variacao-valor">26,02M</span>
+            <span class="variacao-periodo">Ações alugadas (dia)</span>
+          </div>
+          <div class="navbar-acao-variacao">
+            <span class="variacao-valor">7,83B</span>
+            <span class="variacao-periodo">Valor total em aberto</span>
+          </div>
+          <div class="navbar-acao-variacao">
+            <span class="variacao-valor">9205</span>
+            <span class="variacao-periodo">Nº de contratos</span>
+          </div>
+        </div>
+        <div>
+          <!-- AQUI VEM O GRÁFICO HISTÓRICO DE ALUGUEL DE AÇÕES -->
+        </div>
+      </section>
+    </div>
+
+    <div class="tabPanel">Tab 1:Content</div>
+    <div class="tabPanel">Tab 2:Content</div>
+    <div class="tabPanel">Tab 3:Content</div>
+    <div class="tabPanel">Tab 4:Content</div>
+    <div class="tabPanel">Tab 5:Content</div>
+    <div class="tabPanel">Tab 6:Content</div>
+  </div>
+
+  <!--------- FOOTER ----------->
+
+  <section class="container-flex cinza-medio">
+    <div class="footer">
+      <img src="imgs/logo-opcoes-pro-footer.svg" alt="logo-opcoes-pro-preta">
+      <ul id="menu">
+        <li><a href="#">Ativos</a></li>
+        <li><a href="#">Notícias</a></li>
+        <li><a href="#">Estratégias</a></li>
+        <li><a href="#">Ferramentas</a></li>
+        <li><a href="#">Cursos</a></li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!--------- COPYRIGHT ----------->
+
+  <section class="container-flex verde-escuro">
+    <div class="copyright">
+      <span>® Todos os direitos reservados à OpçõesPRO.</span>
+      <span><a href="#">Termos de Uso</a> | <a href="#">Políticas de Privacidade</a></span>
+    </div>
+  </section>
+
+  <script src="../js/navbar.js"></script>
+</body>
+
+</html>
