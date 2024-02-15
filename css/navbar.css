@@ -2,6 +2,11 @@
   --app-min-width: min(1300px, 90%);
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 .navbar-visao-geral {
   width: 100%;
   box-sizing: border-box;
@@ -94,15 +99,15 @@
 
 .navbar-acao-variacoes {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 12px 0;
   justify-content: space-around;
 }
 
 .navbar-acao-variacao {
-  min-width: max-content;
   display: flex;
   flex-direction: column;
+  gap: 0.25rem;
   margin-right: 1.125rem;
 }
 
@@ -297,7 +302,7 @@
 }
 
 .mb-4 {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem !important;
 }
 
 .sobre-acao {
@@ -363,6 +368,7 @@
 .secao-outras-acoes {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  border: 1px solid transparent;
   gap: 20px;
 }
 
@@ -383,4 +389,71 @@
 .tab-opcoes {
   display: flex;
   justify-content: center;
+}
+
+/* tabela */
+
+.container-tabela {
+  max-width: 100%;
+}
+.container-tabela h2 {
+  font-size: clamp(1.25rem, 2vw, 25px);
+  margin-bottom: 30px;
+}
+
+.container-tabela .table-overflow {
+  overflow-x: auto;
+}
+
+table {
+  font-family: inherit;
+  max-width: 100%;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e0e0e0;
+}
+
+th {
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+/* -table-font-size & --table-padding definidas com inline style nas tables */
+th,
+td {
+  padding: 15px 0;
+  text-align: left;
+  font-family: 'Roboto';
+  font-size: var(--table-font-size);
+  line-height: var(--table-font-size);
+  min-width: max-content;
+  white-space: nowrap;
+}
+
+th:first-of-type,
+td:first-of-type {
+  padding-inline: var(--table-padding) 10px;
+}
+th:last-of-type,
+td:last-of-type {
+  padding-inline: 10px var(--table-padding);
+}
+th:not(:first-of-type, :last-of-type),
+td:not(:first-of-type, :last-of-type) {
+  padding-inline: 8px;
+}
+
+th {
+  background-color: var(--table-header);
+  color: var(--cor-branca);
+  font-weight: 700;
+}
+
+td {
+  color: #000;
+}
+
+tbody tr:nth-child(even) {
+  font-family: inherit;
+  background-color: var(--cor-branca-op);
 }

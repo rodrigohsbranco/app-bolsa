@@ -2,7 +2,7 @@
   --cor-primaria: #0dcb76;
   --cor-verde-escuro: #012012;
   --cor-branca: #fff;
-  --cor-branca-op: #EEF2F0;
+  --cor-branca-op: #eef2f0;
   --cor-cinza: #95a39d;
   --cor-bg-claro: #f5f7f6;
   --cor-vermelho: #d60000;
@@ -11,6 +11,8 @@
   --transicao-15: all 0.15s linear;
   --transicao-30: all 0.3s linear;
   --largura-interna: 1300px;
+
+  --table-header: #0f6f43;
 }
 
 @media (max-width: 1366px) {
