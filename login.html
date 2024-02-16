@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <main class="login-container">
+      <section class="login">
+        <img src="./imgs/logo-opcoes-pro-footer.svg" alt="opções pro" />
+
+        <form action="">
+          <div class="login-input-container">
+            <label for="email">Digite o seu E-mail</label>
+            <input type="email" name="email" id="email" placeholder="E-mail" />
+          </div>
+
+          <div class="login-input-container">
+            <label for="password">Digite a sua Senha</label>
+
+            <div class="login-password-container">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Senha"
+              />
+              <button class="login-btn ghost" type="button" id="password-view">
+                <img src="./imgs/password.svg" alt="an eye" />
+              </button>
+            </div>
+          </div>
+
+          <div class="login-actions-container">
+            <div class="login-store">
+              <input type="checkbox" name="remember" id="remember" />
+
+              <label for="remember"><span></span> Lembrar minha senha</label>
+            </div>
+
+            <a href="#" class="login-forgot">Esqueci minha senha</a>
+          </div>
+
+          <div class="login-actions-container">
+            <button class="login-btn primary" type="submit">Acessar</button>
+            <button class="login-btn outline" type="button">Criar Conta</button>
+          </div>
+
+          <div class="login-divisor">
+            <hr />
+            <span>Ou acesse com</span>
+            <hr />
+          </div>
+
+          <div class="login-social">
+            <button class="login-btn ghost" type="button">
+              <img src="./imgs/google.svg" alt="" />
+            </button>
+            <button class="login-btn ghost" type="button">
+              <img src="./imgs/apple.svg" alt="" />
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="./js/login.js"></script>
+  </body>
+</html>

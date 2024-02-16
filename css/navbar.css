@@ -1,6 +1,14 @@
+:root {
+  --app-min-width: min(1300px, 90%);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
 .navbar-visao-geral {
   width: 100%;
-  padding: 3rem;
   box-sizing: border-box;
   position: relative;
   display: flex;
@@ -12,9 +20,17 @@
 }
 
 .navbar-acao-visao-geral {
-  width: var(--largura-interna);
+  width: var(--app-min-width);
   display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
   justify-content: space-between;
+}
+
+@media (max-width: 720px) {
+  .navbar-acao-visao-geral {
+    justify-content: center;
+  }
 }
 
 .navbar-acao,
@@ -32,7 +48,7 @@
 
 .navbar-acao-texto {
   color: var(--cor-verde-escuro);
-  font-family: "Borna";
+  font-family: 'Borna';
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 3.5rem;
@@ -59,6 +75,9 @@
 
 .acao-valor-e-percentual {
   margin-right: 1.125rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 .acao-moeda {
@@ -73,19 +92,22 @@
 }
 
 .acao-percentual {
-  font-size: 2rem;
+  font-size: clamp(1rem, 2rem, 3rem);
   font-weight: 700;
   color: var(--cor-primaria);
 }
 
 .navbar-acao-variacoes {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px 0;
   justify-content: space-around;
 }
 
 .navbar-acao-variacao {
   display: flex;
   flex-direction: column;
+  gap: 0.25rem;
   margin-right: 1.125rem;
 }
 
@@ -107,19 +129,68 @@
   /* height: 350px; */
 }
 
-.tabContainer .buttonContainer {
+.menu-container {
   background-color: var(--cor-branca-op);
+}
+
+.menu-mobile {
+  cursor: pointer;
   display: flex;
+  flex-direction: column;
+  display: none;
   justify-content: center;
+  gap: 5px;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  transition: all 100ms ease-in-out;
+}
+
+.bar:hover {
+  background-color: rgb(16, 16, 16);
+}
+
+.menu-mobile.open .bar:nth-of-type(1) {
+  transform: rotate(45deg);
+  transform-origin: top left;
+  width: 25px;
+}
+
+.menu-mobile.open .bar:nth-of-type(2) {
+  transform-origin: center;
+  width: 0;
+}
+
+.menu-mobile.open .bar:nth-of-type(3) {
+  transform: rotate(-45deg);
+  transform-origin: bottom left;
+  width: 25px;
+}
+
+.tabContainer .buttonContainer {
+  width: var(--app-min-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
   height: 61px;
-  padding: 0 8rem;
+  position: relative;
+}
+
+.tabContainer .buttonContainer .buttons {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
 }
 
 .tabContainer .buttonContainer button {
   color: var(--cor-verde-escuro);
-  width: 10%;
+  width: 11%;
   height: 100%;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-weight: 700;
   float: left;
   border: none;
@@ -129,8 +200,40 @@
   background-color: var(--cor-branca-op);
 }
 
-.tabContainer .buttonContainer button:hover {
+.tabContainer .buttonContainer button:hover,
+.tabContainer .buttonContainer button.active {
   background-color: var(--cor-branca);
+}
+
+@media (max-width: 1024px) {
+  .menu-mobile {
+    display: flex;
+  }
+
+  .tabContainer .buttonContainer .buttons {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 61px;
+    width: 150px;
+  }
+
+  .tabContainer .buttonContainer .buttons.visible {
+    display: flex;
+  }
+
+  .tabContainer .buttonContainer button {
+    width: 100%;
+  }
+
+  .tabContainer .buttonContainer button:hover,
+  .tabContainer .buttonContainer button.active {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+  }
 }
 
 .tabContainer .buttonContainer .botao-texto-acao {
@@ -138,30 +241,52 @@
   font-weight: 700;
   display: flex;
   align-items: center;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   padding-right: 0.625rem;
 }
 
 .tabContainer .tabPanel {
-  height: 100%;
   background-color: var(--cor-branca);
   color: #000000;
-  padding: 5rem 0 0 0;
+  padding-top: clamp(2.5rem, 5rem, 3vh);
   box-sizing: border-box;
   display: none;
-  /* justify-content: center; */
 }
 
 .tabPanel .tab-section {
+  margin: 0 auto;
+  width: var(--app-min-width);
   display: flex;
   flex-direction: column;
-  margin: 0 21rem 0 18rem;
 }
 
-.acao-data-atualizacao {
+.topo-secao {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 20px;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.topo-secao_alugueis {
+  display: flex;
+  gap: 1rem;
+}
+
+.acao-e-separador {
+  flex: 1;
+  min-width: fit-content;
   color: var(--cor-cinza);
   font-size: 0.75rem;
   font-weight: 400;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.acao-e-separador hr {
+  flex: 1;
 }
 
 .topo-secao-graficos {
@@ -176,20 +301,30 @@
   padding-bottom: 0.625rem;
 }
 
-.section-interna-acao {
-  margin-bottom: 4rem;
+.mb-4 {
+  margin-bottom: 4rem !important;
 }
 
 .sobre-acao {
+  margin-top: 1rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px 20px;
-  margin-bottom: 2rem;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+  .sobre-acao {
+    margin-top: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
 }
 
 .info-acao {
   font-size: 1.375rem;
   font-weight: 700;
+  margin-top: 0.25rem;
 }
 
 .link-site-acao {
@@ -202,13 +337,8 @@
 .section-ultimas-noticias {
   background-color: var(--cor-branca-op);
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: stretch;
-  align-content: stretch;
-  padding: 6rem 21rem 6rem 18rem;
-  gap: 20px;
+  flex-direction: column;
+  padding-block: 4rem;
 }
 
 .nome-portal-externo {
@@ -220,7 +350,7 @@
 .ultimas-noticias {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 40px 20px;
 }
 
@@ -235,29 +365,21 @@
   font-weight: 600;
 }
 
-.section-interna-outras-acoes {
-  margin-bottom: 4rem;
+.secao-outras-acoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  border: 1px solid transparent;
+  gap: 20px;
+}
+
+.ativos-selecao {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-}
-
-.topo-secao-outras-acoes {
-  width: 70%;
-  display: flex;
-  gap: 20px;
-  align-items: flex-end;
-  margin: 4rem 0;
-}
-
-.secao-outras-acoes {
-  width: 70%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px 20px;
+  gap: 0.5rem;
 }
 
 .opcoes-select {
+  flex: 1;
   border-color: var(--cor-cinza-borda);
   border-radius: 5px;
   padding: 10px;
@@ -269,36 +391,69 @@
   justify-content: center;
 }
 
-@media (min-width: 768px) and (max-width: 1366px) {
-  .tabPanel .tab-section {
-    display: flex;
-    flex-direction: column;
-    margin: 0 0rem 0 5rem;
-    width: 90%;
-    align-content: center;
-    flex-wrap: wrap;
-  }
+/* tabela */
 
-  .section-ultimas-noticias {
-    padding: 5rem;
-  }
+.container-tabela {
+  max-width: 100%;
+}
+.container-tabela h2 {
+  font-size: clamp(1.25rem, 2vw, 25px);
+  margin-bottom: 30px;
 }
 
-@media (max-width: 767px) {
-  .navbar-acao-visao-geral {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .navbar-acao-info {
-    margin-top: 3rem;
-  }
-
-  .navbar-acao-valor {
-    display: flex;
-    justify-content: start;
-  }
+.container-tabela .table-overflow {
+  overflow-x: auto;
 }
 
-@media (max-width: 500px) {
+table {
+  font-family: inherit;
+  max-width: 100%;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e0e0e0;
+}
+
+th {
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+/* -table-font-size & --table-padding definidas com inline style nas tables */
+th,
+td {
+  padding: 15px 0;
+  text-align: left;
+  font-family: 'Roboto';
+  font-size: var(--table-font-size);
+  line-height: var(--table-font-size);
+  min-width: max-content;
+  white-space: nowrap;
+}
+
+th:first-of-type,
+td:first-of-type {
+  padding-inline: var(--table-padding) 10px;
+}
+th:last-of-type,
+td:last-of-type {
+  padding-inline: 10px var(--table-padding);
+}
+th:not(:first-of-type, :last-of-type),
+td:not(:first-of-type, :last-of-type) {
+  padding-inline: 8px;
+}
+
+th {
+  background-color: var(--table-header);
+  color: var(--cor-branca);
+  font-weight: 700;
+}
+
+td {
+  color: #000;
+}
+
+tbody tr:nth-child(even) {
+  font-family: inherit;
+  background-color: var(--cor-branca-op);
 }
